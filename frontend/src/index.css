@@ -196,3 +196,37 @@ body:has(.login-container) #root {
     transform: translateY(0);
   }
 }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 40px 30px;
+  }
+
+  .login-title {
+    font-size: 1.35rem;
+  }
+
+  .login-subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .login-form {
+    gap: 16px;
+  }
+
+  .login-input {
+    padding: 12px 14px;
+  }
+
+  .btn-primary {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

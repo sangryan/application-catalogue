@@ -744,21 +744,175 @@
 }
 
 /* ---- Responsive ---- */
+
+/* Tablet and below (1024px) */
 @media (max-width: 1024px) {
   .summary-row {
     grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .right-summary-column {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .small-card {
+    flex: 1;
   }
 
   .toolbar {
     flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .filters-container {
+    margin: 0 20px 24px;
+    padding: 20px;
+  }
+
+  .table-container {
+    margin: 0 20px 30px;
+  }
+}
+
+/* Small Tablets / Large Phones (768px) */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right-summary-column {
+    flex-direction: column;
+  }
+
+  .toolbar-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .toolbar-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .currency-tabs {
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filters-row,
+  .filters-row-secondary {
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
   }
 
-  .filters-row {
-    flex-direction: column;
+  .filter-input,
+  .filter-select,
+  .custom-expiry-toggle,
+  .bulk-upload-btn,
+  .add-new-btn,
+  .toggle-label-wrap {
+    width: 100%;
+    flex: none;
+    max-width: none;
   }
 
-  .filters-row-secondary {
+  .donut-body {
     flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .donut-legend {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    /* Enable horizontal scroll on mobile */
+    -webkit-overflow-scrolling: touch;
+    padding: 12px;
+  }
+
+  .apps-table {
+    min-width: 700px;
+    /* Force table to be wide enough to require scroll but look good */
+  }
+
+  .apps-table th, 
+  .apps-table td {
+    padding: 12px 10px;
+  }
+}
+
+/* Small Phones (480px) */
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 16px;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .user-info {
+    font-size: 0.8rem;
+  }
+
+  .summary-row {
+    padding: 16px 15px;
+  }
+
+  .badge-number {
+    padding: 4px 12px;
+  }
+
+  .expiry-days {
+    font-size: 1.1rem;
+  }
+
+  .license-pct {
+    font-size: 1rem;
+  }
+
+  .toolbar-btn {
+    width: 100%;
+    /* Full width buttons on tiny screens */
+  }
+
+  .donut-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-footer {
+    padding: 30px 20px;
+  }
+
+  .footer-logo {
+    height: 48px;
   }
 }
